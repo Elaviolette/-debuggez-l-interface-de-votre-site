@@ -22,7 +22,7 @@ const isFormValid = () => checkSensorId() && checkSensorStatus() && checkSensorB
 const handleGeolocation = () => {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(position => {
-            $latInput.value = position.coords.latitude
+            $latInput.value = position.coords.latitude,
             $lngInput.value = position.coords.longitude
         })
     } else {
